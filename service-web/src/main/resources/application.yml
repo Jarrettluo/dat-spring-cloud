@@ -8,7 +8,7 @@ spring:
     protocol: smtps
     host: smtp.163.com
     port: 465
-    username: luojiarui2@163.com
+    username: ****@163.com
     password: LJR199308
     properties:
       mail:
@@ -20,8 +20,8 @@ spring:
     admin:
       notify:
         mail:
-          to: jiarui.luo@hirain.com
-          from: luojiarui2@163.com
+          to: jiar*************.com
+          from: luoji**********.com
 
 eureka:
   client:
