@@ -1,0 +1,35 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: service-web
+  mail:
+    banner-mode: off
+    protocol: smtps
+    host: smtp.163.com
+    port: 465
+    username: luojiarui2@163.com
+    password: LJR199308
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: jiarui.luo@hirain.com
+          from: luojiarui2@163.com
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
